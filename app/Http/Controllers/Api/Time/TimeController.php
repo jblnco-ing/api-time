@@ -2,6 +2,10 @@
 /**
 * @OA\Info(title="API Time", version="1.0")
 * @OA\Server(
+*      url="https://api-time-laravel.herokuapp.com/",
+*      description="HEROKU Server"
+* ),
+* @OA\Server(
 *      url="http://localhost:8000/",
 *      description="Local Server"
 * )
