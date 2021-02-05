@@ -6,6 +6,10 @@
     },
     "servers": [
         {
+            "url": "https://api-time-laravel.herokuapp.com/",
+            "description": "HEROKU Server"
+        },
+        {
             "url": "http://localhost:8000/",
             "description": "Local Server"
         }
@@ -32,7 +36,7 @@
                                     },
                                     "timezone": {
                                         "type": "string",
-                                        "example": "-04"
+                                        "example": "-0430"
                                     }
                                 },
                                 "type": "object"
@@ -51,7 +55,7 @@
                                             "properties": {
                                                 "time": {
                                                     "type": "string",
-                                                    "example": "21:00:00"
+                                                    "example": "16:30:00"
                                                 },
                                                 "timezone": {
                                                     "type": "string",
