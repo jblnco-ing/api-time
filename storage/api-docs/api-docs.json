@@ -1,0 +1,82 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "title": "API Time",
+        "version": "1.0"
+    },
+    "servers": [
+        {
+            "url": "http://localhost:8000/",
+            "description": "Local Server"
+        }
+    ],
+    "paths": {
+        "/api/time": {
+            "post": {
+                "tags": [
+                    "Time"
+                ],
+                "summary": "Display the time in utc format.",
+                "requestBody": {
+                    "content": {
+                        "application/json": {
+                            "schema": {
+                                "required": [
+                                    "time",
+                                    "timezone"
+                                ],
+                                "properties": {
+                                    "time": {
+                                        "type": "string",
+                                        "example": "12:00:00"
+                                    },
+                                    "timezone": {
+                                        "type": "string",
+                                        "example": "-04"
+                                    }
+                                },
+                                "type": "object"
+                            }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Return the time in utc format.",
+                        "content": {
+                            "application/json": {
+                                "schema": {
+                                    "properties": {
+                                        "response": {
+                                            "properties": {
+                                                "time": {
+                                                    "type": "string",
+                                                    "example": "21:00:00"
+                                                },
+                                                "timezone": {
+                                                    "type": "string",
+                                                    "example": "utc"
+                                                }
+                                            },
+                                            "type": "object"
+                                        }
+                                    },
+                                    "type": "object"
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "tags": [
+        {
+            "name": "Time",
+            "description": "Get times"
+        }
+    ],
+    "security": [
+        []
+    ]
+}
