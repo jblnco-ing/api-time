@@ -13,5 +13,6 @@ use Illuminate\Support\Facades\Route;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+// HOLA
 
 Route::post('time', 'Api\Time\TimeController@time');
